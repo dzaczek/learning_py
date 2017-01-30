@@ -1,5 +1,6 @@
+#!/usr/bin/python
 from random import randint
-
+import os
 board = []
 
 for x in range(5):
@@ -20,14 +21,17 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
+turns_x=4
+for turn in range(turns_x):
+    os.system('clear')
+    print "Turn", turn+1, " from ", turns_x+1
 
-for turn in range(4):
-    print "Turn", turn+1
+    print_board(board)
     # Everything from here on should go in your for loop!
     # Be sure to indent four spaces!
-    guess_row = int(raw_input("Guess Row:"))
-    guess_col = int(raw_input("Guess Col:"))
-    
+    guess_row = int(raw_input("Guess Row(1-5):"))-1
+    guess_col = int(raw_input("Guess Col(1-5):"))-1
+
     if guess_row == ship_row and guess_col == ship_col:
         print "Congratulations! You sunk my battleship!"
         board[guess_row][guess_col] = "S"
