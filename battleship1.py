@@ -50,4 +50,4 @@ for turn in range(turns_x):
          os.system('clear')
          board[ship_row][ship_col] = "S"
          print_board(board)
-        print "Game Over"
+         print "Game Over"
