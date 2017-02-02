@@ -21,6 +21,6 @@ def remove_duplicates2(arg):
 if __name__ == '__main__':
     import timeit
 
-    a=[4,5,5,3,2,3,2,1,2,3,2,3,1,2,3,4,2,1,2,3,4,5,2,1,23,4,21,3,3,2,1,2,3,4,5,6,4,5,6,4]*25
+    a=[4,5,5,3,2,3,2,1,2,3,2,3,1,2,3,4,2,1,2,3,4,5,2,1,23,4,21,3,3,2,1,2,3,4,5,6,4,5,6,4]*100
     print(timeit.timeit("remove_duplicates(a)", setup="from __main__ import remove_duplicates,a"))
     print(timeit.timeit("remove_duplicates2(a)", setup="from __main__ import remove_duplicates2,a"))
